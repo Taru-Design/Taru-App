@@ -3,7 +3,8 @@ import {DarkTheme, DefaultTheme, NavigationContainer} from '@react-navigation/na
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from "../screens/Home";
 import ProfileScreen from "../screens/Profile";
-import {ColorSchemeName} from "react-native";
+import {ColorSchemeName, View} from "react-native";
+import Header from "../components/Header/Header";
 
 const Stack = createNativeStackNavigator();
 
@@ -16,7 +17,15 @@ export default function Navigation ({ colorScheme }: { colorScheme: ColorSchemeN
                 <Stack.Screen
                     name="Home"
                     component={HomeScreen}
-                    options={{ title: 'Home' }}
+                    options={{
+                        headerShadowVisible: true,
+                        headerTitle: () => <Header />,
+                        headerStyle: {
+                            backgroundColor: '#1E212D',
+                        },
+                        statusBarColor : '#1E212D',
+                        statusBarStyle : 'light',
+                    }}
                 />
                 <Stack.Screen name="Profile" component={ProfileScreen} />
             </Stack.Navigator>

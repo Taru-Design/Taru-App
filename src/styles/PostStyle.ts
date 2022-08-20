@@ -2,34 +2,63 @@ import { StyleSheet } from "react-native";
 
 export const PostStyle = StyleSheet.create ({
     container : {
-
+        marginVertical: 15
     },
     head : {
-        flexDirection: 'row',
+        flexDirection: "row",
+        height: 40,
         alignItems: "center",
         justifyContent: "space-between",
-        backgroundColor: 'red',
-        padding: 7
+        paddingHorizontal: 10
     },
-    imgView : {
+    icons : {
+        flexDirection: "row",
+        width: '35%',
+        justifyContent: "space-between"
+    },
+    count : {
 
     },
-    img : {
-        height: 50,
-        width: 50,
-        borderRadius: 25,
+    profile : {
+        flexDirection: "row",
+        alignItems: "center",
+        position: "relative",
+        top: 20,
+        zIndex: 1
+    },
+    username : {
+        fontWeight: "bold",
+    },
+    userImg : {
+        height: 60,
+        width: 60,
+        backgroundColor: '#FF9A62',
+        marginLeft: 10,
+        borderRadius: 30,
+        alignItems: "center",
+        justifyContent: "center",
+        overflow: "hidden",
+        borderColor: 'white',
+        borderWidth: 1
     },
     content : {
-        height: 350,
-        backgroundColor: 'blue'
+        backgroundColor: 'rgba(246,58,58,0.4)'
     },
-    reaction : {
-        backgroundColor: 'yellow',
+    description : {
         padding: 5
+    },
+    descriptionText : {
+
     },
     comment : {
-        backgroundColor: 'gray',
-        maxHeight: 80,
-        padding: 5
+        flexDirection: "row",
+        paddingHorizontal: 5,
+        alignItems: "center"
+    },
+    commentInput : {
+        flex: 1,
+        height: 50,
+        paddingLeft: 5,
+        marginLeft: 5
     }
 })
